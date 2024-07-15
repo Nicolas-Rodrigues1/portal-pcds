@@ -4,6 +4,7 @@ import { NgModule } from "@angular/core";
 import { SharedModule } from "../shared/shared.module";
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
+import { MaterialModule } from "../core/material/material.module";
 
 @NgModule({
     declarations:[
@@ -12,7 +13,8 @@ import { LoginComponent } from './login/login.component';
   ],
     imports:[
         CommonModule,
-        SharedModule
+        SharedModule,
+        MaterialModule
     ],
     exports:[
         CadastroComponent,

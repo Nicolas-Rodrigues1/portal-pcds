@@ -5,27 +5,32 @@ import { FooterComponent } from './footer/footer.component';
 import { FormBaseComponent } from './form-base/form-base.component';
 import { BannerComponent } from './banner/banner.component';
 import { ContainerComponent } from './container/container.component';
+import { MaterialModule } from "../core/material/material.module";
+import { CardComponent } from './card/card.component';
 
 @NgModule({
     declarations:[
-
-    
-    HeaderComponent,
-           FooterComponent,
-           HeaderComponent,
-           FormBaseComponent,
-           BannerComponent,
-           ContainerComponent
-  ],
+        HeaderComponent,
+        FooterComponent,
+        HeaderComponent,
+        FormBaseComponent,
+        BannerComponent,
+        ContainerComponent,
+        FormBaseComponent,
+        CardComponent
+    ],
     imports:[
-        CommonModule
+        CommonModule,
+        MaterialModule
     ],
     exports:[
         FooterComponent,
         HeaderComponent,
         FormBaseComponent,
         BannerComponent,
-        ContainerComponent
+        ContainerComponent,
+        FormBaseComponent,
+        CardComponent
     ]
 })
 
