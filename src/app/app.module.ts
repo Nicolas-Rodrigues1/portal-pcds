@@ -6,6 +6,7 @@ import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AutenticacaoModule } from './autenticacao/autenticacao.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { AutenticacaoModule } from './autenticacao/autenticacao.module';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     SharedModule,
     AutenticacaoModule,
     HomeModule,

@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormBaseComponent } from './form-base/form-base.component';
 import { BannerComponent } from './banner/banner.component';
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
     declarations:[
@@ -11,14 +12,20 @@ import { BannerComponent } from './banner/banner.component';
     
     HeaderComponent,
            FooterComponent,
+           HeaderComponent,
            FormBaseComponent,
-           BannerComponent
+           BannerComponent,
+           ContainerComponent
   ],
     imports:[
         CommonModule
     ],
     exports:[
-
+        FooterComponent,
+        HeaderComponent,
+        FormBaseComponent,
+        BannerComponent,
+        ContainerComponent
     ]
 })
 
