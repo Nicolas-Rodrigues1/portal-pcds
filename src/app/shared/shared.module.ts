@@ -7,6 +7,7 @@ import { BannerComponent } from './banner/banner.component';
 import { ContainerComponent } from './container/container.component';
 import { MaterialModule } from "../core/material/material.module";
 import { CardComponent } from './card/card.component';
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
     declarations:[
@@ -21,7 +22,8 @@ import { CardComponent } from './card/card.component';
     ],
     imports:[
         CommonModule,
-        MaterialModule
+        MaterialModule,
+        ReactiveFormsModule
     ],
     exports:[
         FooterComponent,

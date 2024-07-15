@@ -12,29 +12,31 @@ export class FormBaseComponent implements OnInit{
 
   @Input() perfilComponent = false;
   @Input() title = 'Crie seu cadastro';
-  @Input()  textoBotao = 'CADASTRAR';
+  @Input() textoBotao = 'CADASTRAR';
   @Output() acaoClique: EventEmitter<any> = new EventEmitter<any>();
   @Output() sair: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(
     private formBuilder: FormBuilder,
-    private formService: FormularioService
+    private formularioService: FormularioService
   ){}
 
   ngOnInit() {
     this.cadastroForm = this.formBuilder.group({
-      nome: [null, Validators.required],
+      nome: [null, [Validators.required]],
       nascimento: [null, [Validators.required]],
       cpf: [null, [Validators.required]],
-      cidade: [null, Validators.required],
+      cep: [null, [Validators.required]],
       email: [null, [Validators.required, Validators.email]],
       senha: [null, [Validators.required, Validators.minLength(3)]],
       genero: ['outro'],
-      telefone: [null, Validators.required],
-      onfirmarEmail: [null, [Validators.required, Validators.email]],
+      telefone: [null, [Validators.required]],
+      confirmarEmail: [null, [Validators.required, Validators.email]],
       confirmarSenha: [null, [Validators.required, Validators.minLength(3)]],
       aceitarTermos: [false, [Validators.requiredTrue]]
     })
+
+    this.formularioService.setCadastro(this.cadastroForm);
   }
 
   executarAcao(){

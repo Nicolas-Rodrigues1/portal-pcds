@@ -5,6 +5,8 @@ import { SharedModule } from "../shared/shared.module";
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { MaterialModule } from "../core/material/material.module";
+import { ReactiveFormsModule } from "@angular/forms";
+import { AutenticacaoRoutingModule } from "./autenticacao-routing.module";
 
 @NgModule({
     declarations:[
@@ -14,7 +16,8 @@ import { MaterialModule } from "../core/material/material.module";
     imports:[
         CommonModule,
         SharedModule,
-        MaterialModule
+        MaterialModule,
+        ReactiveFormsModule
     ],
     exports:[
         CadastroComponent,
