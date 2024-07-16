@@ -24,6 +24,10 @@ export class HomeComponent implements OnInit{
       processador: [null, [Validators.required]],
       memoriaRam: [null, [Validators.required]],
       armazenamento: [null, [Validators.required]],
+      monitor: [null, [Validators.required]],
+      teclado: [null, [Validators.required]],
+      mouse: [null, [Validators.required]],
+      
     })
 
     this.homeService.setHomeForm(this.homeForm);
