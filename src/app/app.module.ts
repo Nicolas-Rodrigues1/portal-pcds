@@ -20,7 +20,6 @@ import { MaterialModule } from './core/material/material.module';
     AppRoutingModule,
     SharedModule,
     MaterialModule,
-    AutenticacaoModule,
     HomeModule,
     BrowserAnimationsModule,
     ReactiveFormsModule
