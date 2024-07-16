@@ -10,7 +10,7 @@ import { HomeService } from './services/home.service';
 export class HomeComponent implements OnInit{
   homeForm!: FormGroup;
 
-  @Input() title = 'Monte sua máquina'
+  @Input() title = 'Monte seu pedido de venda'
   @Input() textoBotao = 'Realizar pedido'
 
   constructor(

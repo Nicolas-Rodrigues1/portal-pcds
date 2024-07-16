@@ -1,4 +1,4 @@
-<app-banner src="assets/imagens/monteseupc.png" alt="Banner monte seu pc">
+<app-banner src="assets/imagens/pedido.png" alt="Banner monte seu pc">
 </app-banner>
 <app-container>
     <mat-card>
@@ -19,7 +19,7 @@
                         <label>Placa Mãe</label>
                         <mat-radio-group formControlName="placaMae">
                             <mat-radio-button value="asus">Asus</mat-radio-button>
-                            <mat-radio-button value="gigabyte">Gigabyte</mat-radio-button>
+                            <mat-radio-button [disabled]="false" value="gigabyte">Gigabyte</mat-radio-button>
                         </mat-radio-group>
                     </div>
                     <div class="radio-group">
