@@ -99,7 +99,8 @@
           </mat-error>
         </mat-card-content>
         <mat-card-actions class="full-width">
-          <button 
+          <button
+          [disabled]="cadastroForm.invalid" 
           (click)="executarAcao()"
           mat-flat-button 
           color="primary"
