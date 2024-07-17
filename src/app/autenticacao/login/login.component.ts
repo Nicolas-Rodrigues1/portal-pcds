@@ -26,7 +26,16 @@ export class LoginComponent implements OnInit{
   login(){
     if(this.loginForm.valid){
       const email = this.loginForm.value.email;
-      
+      const senha = this.loginForm.value.senha;
+      this.authService.autenticar(email, senha).subscribe({
+        next: (value) => {
+          console.log('Autenticado', value);
+        },
+        error: (err) => {
+          console.log('Problema', err)
+        }
+      })
+
     }
   }
 

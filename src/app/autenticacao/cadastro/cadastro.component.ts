@@ -16,7 +16,7 @@ export class CadastroComponent {
   cadastrar(){
     const formCadastro = this.formularioService.getCadastro();
     console.log(formCadastro?.value)
-    this.router.navigate(['/home'])
+    this.router.navigate(['/login'])
   }
 
 }
