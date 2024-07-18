@@ -5,10 +5,10 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './core/material/material.module';
+import { ErroModule } from './core/erro/erro.module';
 
 
 @NgModule({
@@ -20,9 +20,9 @@ import { MaterialModule } from './core/material/material.module';
     AppRoutingModule,
     SharedModule,
     MaterialModule,
-    HomeModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ErroModule
   ],
   providers: [],
   bootstrap: [AppComponent]

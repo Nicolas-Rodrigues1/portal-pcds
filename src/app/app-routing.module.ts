@@ -1,16 +1,24 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { CadastroComponent } from "./autenticacao/cadastro/cadastro.component";
-import { LoginComponent } from "./autenticacao/login/login.component";
 
 const routes: Routes = [
+    {
+        path: 'auth',
+        loadChildren: () => import('./autenticacao/autenticacao.module').then(m => m.AutenticacaoModule)
+    },
+    {
+        path: 'auth',
+        loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    },
     {
         path: '',
         component: CadastroComponent
     },
     {
-        path: 'login',
-        component: LoginComponent
+        path: '**',
+        redirectTo: '/pagina-nao-encontrada',
+        pathMatch: 'full'
     }
 ]
 
