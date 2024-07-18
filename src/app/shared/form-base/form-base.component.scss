@@ -3,13 +3,6 @@ app-container {
     margin-bottom: 48px;
     margin-top: 32px;
   
-    .acoesPerfil {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin: 12px 16px 12px 0;
-    }
-  
     .grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr;

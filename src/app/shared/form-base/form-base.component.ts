@@ -11,7 +11,6 @@ import { FormValidations } from '../form-validations';
 export class FormBaseComponent implements OnInit{
   cadastroForm!: FormGroup;
 
-  @Input() perfilComponent = false;
   @Input() title = 'Crie seu cadastro';
   @Input() textoBotao = 'CADASTRAR';
   @Output() acaoClique: EventEmitter<any> = new EventEmitter<any>();

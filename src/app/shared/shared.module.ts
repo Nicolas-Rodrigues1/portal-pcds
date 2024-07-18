@@ -1,5 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { RouterModule } from '@angular/router';
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormBaseComponent } from './form-base/form-base.component';
@@ -23,7 +25,8 @@ import { ReactiveFormsModule } from "@angular/forms";
     imports:[
         CommonModule,
         MaterialModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        RouterModule
     ],
     exports:[
         FooterComponent,

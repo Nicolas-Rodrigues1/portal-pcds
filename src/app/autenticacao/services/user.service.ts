@@ -39,7 +39,7 @@ export class UserService {
    }
 
    estaLogado(){
-    this.tokenService.possuiToken();
+    return this.tokenService.possuiToken();
    }
 
 }

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { HomeService } from './services/home.service';
 import { UserService } from '../autenticacao/services/user.service';
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
-  homeForm!: FormGroup;
+    homeForm!: FormGroup;
 
   @Input() title = 'Monte seu pedido de venda'
   @Input() textoBotao = 'Realizar pedido'
@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit{
     })
 
     this.homeService.setHomeForm(this.homeForm);
+
   }
 
   realizarPedido(){
