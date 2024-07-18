@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './core/material/material.module';
 import { ErroModule } from './core/erro/erro.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ErrosInterceptor } from './core/erro/erros.interceptor';
 
 
 @NgModule({
@@ -24,7 +26,13 @@ import { ErroModule } from './core/erro/erro.module';
     ReactiveFormsModule,
     ErroModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrosInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
