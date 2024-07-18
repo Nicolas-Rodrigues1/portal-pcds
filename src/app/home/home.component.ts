@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HomeService } from './services/home.service';
+import { UserService } from '../autenticacao/services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +17,9 @@ export class HomeComponent implements OnInit{
 
   constructor(
     private formBuilder: FormBuilder,
-    private homeService: HomeService
+    private homeService: HomeService,
+    private userService: UserService,
+    private router: Router
   ){}
 
   ngOnInit() {
@@ -35,6 +39,11 @@ export class HomeComponent implements OnInit{
 
   realizarPedido(){
     console.log(this.homeForm.value)
+  }
+
+  logout(){
+    this.userService.logout();
+    this.router.navigateByUrl('/login');
   }
 
 }

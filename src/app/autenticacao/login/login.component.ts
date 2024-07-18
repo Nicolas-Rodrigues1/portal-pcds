@@ -30,6 +30,8 @@ export class LoginComponent implements OnInit{
       this.authService.autenticar(email, senha).subscribe({
         next: (value) => {
           console.log('Autenticado', value);
+          this.router.navigateByUrl('/home');
+          this.loginForm.reset();
         },
         error: (err) => {
           console.log('Problema', err)
