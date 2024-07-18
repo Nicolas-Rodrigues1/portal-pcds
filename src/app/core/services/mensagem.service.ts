@@ -11,9 +11,9 @@ export class MensagemService {
 
   constructor(private _snackBar: MatSnackBar) {}
 
-  openSnackBar(message: string) {
+  openSnackBar(message: string, duracao: number = 3000) {
     this._snackBar.open(message, undefined, {
-        duration: 3000,
+        duration: duracao,
         horizontalPosition: this.horizontalPosition,
         verticalPosition: this.verticalPosition,
     });

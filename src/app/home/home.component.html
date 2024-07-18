@@ -19,7 +19,7 @@
                         <label>Placa Mãe</label>
                         <mat-radio-group formControlName="placaMae">
                             <mat-radio-button value="asus">Asus</mat-radio-button>
-                            <mat-radio-button [disabled]="false" value="gigabyte">Gigabyte</mat-radio-button>
+                            <mat-radio-button value="gigabyte">Gigabyte</mat-radio-button>
                         </mat-radio-group>
                     </div>
                     <div class="radio-group">
@@ -46,25 +46,26 @@
                     <div class="radio-group">
                         <label>Monitor</label>
                         <mat-radio-group formControlName="monitor">
-                            <mat-radio-button value="monitor">Monitor</mat-radio-button>
+                            <mat-radio-button value="monitor">Monitor Dell</mat-radio-button>
                         </mat-radio-group>
                     </div>
                     <div class="radio-group">
                         <label>Teclado</label>
                         <mat-radio-group formControlName="teclado">
-                            <mat-radio-button value="teclado">Teclado</mat-radio-button>
+                            <mat-radio-button value="teclado">Teclado Microsoft</mat-radio-button>
                         </mat-radio-group>
                     </div>
                     <div class="radio-group">
                         <label>Mouse</label>
                         <mat-radio-group formControlName="mouse">
-                            <mat-radio-button value="mouse">Mouse</mat-radio-button>
+                            <mat-radio-button value="mouse">Mouse HP</mat-radio-button>
                         </mat-radio-group>
                     </div>
                 </div>
             </mat-card-content>
             <mat-card-actions class="full-width">
                 <button
+                [disabled]="!opcaoSelecionada()"
                 mat-flat-button
                 color="primary"
                 (click)="realizarPedido()"
