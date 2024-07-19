@@ -12,7 +12,6 @@ import { MensagemService } from '../core/services/mensagem.service';
 })
 export class HomeComponent implements OnInit{
     homeForm!: FormGroup;
-    qualquerOpcaoSelecionada: boolean = false;
 
   @Input() title = 'Monte seu pedido de venda'
   @Input() textoBotao = 'Realizar pedido'
@@ -36,6 +35,10 @@ export class HomeComponent implements OnInit{
       mouse: [null, [Validators.required]],
       
     })
+
+    this.homeForm.get('placaMae')?.valueChanges.subscribe(value => {
+      this.desabilitaProcessador(value);
+    });
 
     this.homeForm.valueChanges.subscribe(() => {
       this.opcaoSelecionada();
@@ -68,6 +71,22 @@ export class HomeComponent implements OnInit{
   opcaoSelecionada() {
     const controls = this.homeForm.controls;
     return Object.keys(controls).some(key => controls[key].value !== null);
+  }
+
+  desabilitaProcessador(value: string) {
+    const processadorControl = this.homeForm.get('processador');
+  
+    if (value === 'asus') {
+      processadorControl?.setValue(null);
+      processadorControl?.get('amd')?.disable({ emitEvent: false });
+      processadorControl?.get('intel')?.enable({ emitEvent: false });
+    } else if (value === 'gigabyte') {
+      processadorControl?.setValue(null);
+      processadorControl?.get('intel')?.disable({ emitEvent: false });
+      processadorControl?.get('amd')?.enable({ emitEvent: false });
+    } else {
+      processadorControl?.enable({ emitEvent: false });
+    }
   }
 
 }
