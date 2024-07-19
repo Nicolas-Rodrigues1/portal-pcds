@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HomeService } from './services/home.service';
 import { UserService } from '../autenticacao/services/user.service';
 import { Router } from '@angular/router';
@@ -88,5 +88,6 @@ export class HomeComponent implements OnInit{
       processadorControl?.enable({ emitEvent: false });
     }
   }
+
 
 }

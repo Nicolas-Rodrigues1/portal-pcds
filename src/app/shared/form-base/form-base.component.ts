@@ -13,8 +13,8 @@ export class FormBaseComponent implements OnInit{
 
   @Input() title = 'Crie seu cadastro';
   @Input() textoBotao = 'CADASTRAR';
-  @Output() acaoClique: EventEmitter<any> = new EventEmitter<any>();
-  @Output() sair: EventEmitter<any> = new EventEmitter<any>();
+  @Output() acaoClique: EventEmitter<void> = new EventEmitter<void>();
+  @Output() sair: EventEmitter<void> = new EventEmitter<void>();
 
   constructor(
     private formBuilder: FormBuilder,
