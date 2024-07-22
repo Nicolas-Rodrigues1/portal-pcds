@@ -1,0 +1,9 @@
+{
+    "posts":[
+        {"email": "nicolas@email.com", "senha": "1234"},
+        {"email": "ana@email.com", "senha": "password1"},
+        {"email": "maria@email.com", "senha": "abc123"},
+        {"email": "joao@email.com", "senha": "mypassword"},
+        {"email": "carla@email.com", "senha": "senhaSegura"}
+    ]
+}
