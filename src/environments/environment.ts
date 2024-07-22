@@ -1,3 +1,3 @@
 export const environment = {
-    dbJsonApi: 'http://api.portalpcds.com'
+    apiUrl: 'http://api.portalpcds.com'
 };

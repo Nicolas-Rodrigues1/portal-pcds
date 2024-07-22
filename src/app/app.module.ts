@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './core/material/material.module';
 import { ErroModule } from './core/erro/erro.module';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ErrosInterceptor } from './core/erro/erros.interceptor';
 import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor';
 
@@ -20,6 +20,7 @@ import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     SharedModule,
     MaterialModule,
     BrowserAnimationsModule,
